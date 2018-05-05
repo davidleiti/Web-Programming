@@ -1,0 +1,109 @@
+.container::after {
+    content:"\0020";display:block;height:0;clear:both;overflow:hidden;visibility:hidden;
+}
+
+#header{
+    position: relative;background:#000;color:#fff;border-color:#666;padding:5px;
+}
+
+.container{
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-top:2px;
+    padding-bottom: 0px;
+    position: relative;
+}
+
+table, tr, th{
+    color: white;
+    vertical-align: center;
+    font-family: Arial,Helvetica,freesans,sans-serif;
+    font-style: normal;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-size: 13px;
+}
+
+table{
+    border-collapse: collapse;
+    background-color: black;
+    line-height: 24px;
+    border-left: 0px;
+}
+
+
+th{
+    text-align: center;
+    padding-left: 20px; 
+    padding-top: 2px;
+    padding-right: 20px;
+    height: 100%;
+    border-right: 1px solid rgba(255,255,255,0.5);
+}
+
+span#arrow{
+    background-image:url(http://static.bbci.co.uk/frameworks/barlesque/3.22.39/orb/4/img/orb-sprite.gif);
+    color: solid white;
+    display: inline-block;
+    width: 0px;
+}
+
+.search-form{
+    border:none;background:none;height:1.846em;min-height:24px;font-weight:bold;width:162px;float:left;padding:0 0 0 6px;color:#333;font-weight:bold;
+    color:  #333;font-weight:bold;
+    padding-top: 1px;
+    padding-left: 20px;
+    width: 180px;
+}
+
+input[type = text]{
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 160px 1px;
+    background-size: 15%; 
+    padding-left: 5px;
+    background-repeat: no-repeat;
+    border: 0;
+    height: 22px;
+}
+
+input::placeholder{
+    font-weight: bold;
+    color:black;
+}
+
+#nav_links ul{
+    overflow:hidden;
+    padding-right: 5px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.nav_elem{
+    float: left;
+    border-color:#666;
+}
+
+#statusbar{
+    margin-left:0;
+    color: solid white;
+}
+
+.headerDivider{
+    border-left: 1px solid rgba(255,255,255,0.3);
+    background: #16222c;
+    width: 1px;
+    height: 38px;
+    top: 0px;
+    left: 235px;
+    position: fixed;
+}
+
+body{
+    padding: 0;
+    font-size: 13px;
+    margin: 0;
+    font-family: Arial,Helvetica,freesans,sans-serif;
+}

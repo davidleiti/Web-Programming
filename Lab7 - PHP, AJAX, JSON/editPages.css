@@ -1,0 +1,12 @@
+table{
+    text-align:left;
+}
+#operations th{
+    font-weight: normal;
+}
+.b{
+    width: 70px;
+}
+fieldset{
+    width: 500px;
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<!-- Develop an html+css web document that looks like the following web page: http://www.bbc.com/. 
+You should clone about one screen of this web page (not the whole web page) and your html document should look approximately 90% as the given web page. 
+No interactivity should be added (e.g. javascript, :hover effects etc.) and you are not allowed to use any css or javascript library. -->
+<html>
+    <head>
+        <link rel = "stylesheet" href = "banner.css">
+        <link rel = "stylesheet" href = "highlighted.css">
+    </head>
+    <body>
+        <div id = "header"> 
+            <div class="container"> 
+                <div class = "nav_elem" id = "logo" style = "padding-right: 15px;border-right: 1px solid rgba(255,255,255,0.5);"> 
+                    <img src="bbc-blocks-light.png" width="84" height="24" alt="BBC"> 
+                </div> 
+                <div class = "nav_elem" id = "statusbar"  style = "padding-right: 1px;border-right: 1px solid rgba(255,255,255,0.5);" >
+                    <img src = "emberke.png" height = 25px; width = "170px">
+                </div>
+                <table  id = "nav_links" class = "nav_elem">
+                    <tr>
+                        <th>Home</th>
+                        <th>News</th>
+                        <th>Sport</th>
+                        <th>Weather</th>
+                        <th>Shop</th>
+                        <th>Earth</th>
+                        <th>Travel</th>
+                        <th>Capital</th>
+                        <th  width = "100px" style = "text-align:left;padding-left:15px;">More<span id= "arrow"></span></th>
+                    </tr>
+                </table>
+                <div class="search-form nav_elem">
+                    <form  style: "width: 180px;">
+                        <input style = "width: 100%; font-style: bold;" type="text" placeholder="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id = "main">
+            <section id = "highlighted">
+                <div id = "welcome">
+                    <h2 id = "welcometext">
+                        <span>Welcome to BBC.com</span>
+                        Saturday, 31 March
+                    </h2>
+                </div>
+            </section>
+            <section id = "promo">
+                <div id = "promocontent">
+                    <ul id = "medialist">
+                        <li id = "main-promo">
+                            <div class = "media-container">
+                                <div class = "media-image">
+                                    <img src = "item1.jpg" alt = "goddamn immigrants" width = "624">
+                                </div>
+                                <div class = "media-content">
+                                    <h3 class = "main-title">Armed French officers spark row with Italy</h3>
+                                    <p class = "media-summary"> Italy reacts angrily as customs officers enter a migrant centre to carry out a urine test.</p>
+                                    <p class = "tag-red tag">EUROPE</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class = "list-item">
+                            <div class = "media-container">
+                                <div class = "media-image">
+                                    <img src = "item2.jpg" alt = "i hate my life" width = "304">
+                                </div>
+                                <div class = "media-content">
+                                    <h3 class = "media-title">Saturday's European Football: Bayern Munich put six past Dortmund</h3>
+                                    <p class = "tag-yellow tag">EUROPEAN FOOTBALL</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class = "list-item">
+                            <div class = "media-container">
+                                <div class = "media-image">
+                                    <img src = "item3.jpg" alt = "existence is misery" width = "304">
+                                </div>
+                                <div class = "media-content">
+                                    <h3 class = "media-title">How much should your boss know about you?</h3>
+                                    <p class = "tag-blue tag">DID YOU MISS?</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class = "list-item">
+                            <div class = "media-container">
+                                <div class = "media-image">
+                                    <img src = "item4.jpg" alt = "all around me are familiar faces" width = "304">
+                                </div>
+                                <div class = "media-content">
+                                    <h3 class = "media-title">How many caliories make a champion</h3>
+                                    <p class = "tag-blue tag">newsbeat</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class = "list-item">
+                            <div class = "media-container">
+                                <div class = "media-image" id = "small-image">
+                                    <img src = "item5.jpg" alt = "all I see are demons" width = "304" height = "170.81">
+                                </div>
+                                <div class = "media-content">
+                                    <h3 class = "media-title">Why Isle of Dogs is no shaggy dog story</h3>
+                                    <p class = "tag-blue tag">entertainment & arts</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id = "module-news-sports">
+                <div id = "module-compound">
+                    <div id = "module-container">
+                        <section id = "news">
+                            <h2>
+                                <p class = "title title-red">News</p>
+                            </h2>
+                            <div class = "module-content">
+                                <ul class = "media-list-horizontal">
+                                    <li class = "media-list-item">
+                                        <div class = "media-block-link">
+                                            <div class = "new-media-image">
+                                                <img src = "news1.jpg" alt = "end my suffering" width = "405px">
+                                            </div>
+                                            <div class = "media-content"style = "position:unset; width:100%;">
+                                                <h3 class = "news-title" style = "color:black;">Tesla was on Autopilot in fatal crash</h3>
+                                                <p class = "news-summary">The company says a Model X vehicle involved in a fatal crash in the US was in Autopilot mode.</p>
+                                                <p class = "tag tag-red" style = "bottom: 0px;margin-top:20px;">us & canada</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class = "media-list-item">
+                                        <div class = "media-block-link">
+                                            <div class = "new-media-image">
+                                                <img src = "news2.jpg" alt = "there's no way out" width = "405px">
+                                            </div>
+                                            <div class = "media-content"style = "position:unset; width:100%;">
+                                                <h3 class = "news-title" style = "color:black;">Aeroflot plane in deepening Russia-UK row</h3>
+                                                <p class = "news-summary">The UK says the search of an Aeroflot plane at Heathrow was routine - illegal says Russia.</p>
+                                                <p class = "tag tag-red" style = "bottom: 0px;margin-top:20px;">europe</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class = "media-list-item">
+                                        <div class = "media-block-link">
+                                            <div class = "new-media-image">
+                                                <img src = "news3.jpg" alt = "there's no way out" width = "405px">
+                                            </div>
+                                            <div class = "media-content"style = "position:unset; width:100%;">
+                                                <h3 class = "news-title" style = "color:black;">Mount Everest: Sherpa to attempt record 22nd climb</h3>
+                                                <p class = "news-summary">Nepali Kami Rita Sherpa, 48, is hoping to break the record for most successful climbs of Everest.</p>
+                                                <p class = "tag tag-red" style = "bottom: 0px;margin-top:20px;">asia</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

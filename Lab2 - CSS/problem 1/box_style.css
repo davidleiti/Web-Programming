@@ -1,0 +1,46 @@
+body {
+    padding-top: 200px;
+}
+
+.horizontal{
+    background: -webkit-linear-gradient(left, rgba(255,0,0,1) 0%, rgba(0,0,255,0) 50%, rgba(255,0,0,1) 100%);
+}
+
+.vertical {
+    background: -webkit-linear-gradient(top, rgba(255,0,0,1) 0%, rgba(0,0,255,0) 50%, rgba(255,0,0,1) 100%);
+}
+
+div#box {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+div#top {
+    width: 200px;
+    height: 5px;
+    position: absolute;
+    top: 0;
+}
+
+div#bottom {
+    width: 200px;
+    height: 5px;
+    position: absolute;
+    bottom: 0;
+}
+
+div#right {
+    width: 5px;
+    height: 200px;
+    position: absolute;
+    right: 0;
+}
+
+div#left {
+    width: 5px;
+    height: 200px;
+    position: absolute;
+    left: 0;
+}

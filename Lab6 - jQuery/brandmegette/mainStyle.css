@@ -1,0 +1,19 @@
+div#container{
+    width: 1200px;
+    height: 700px;
+    margin: 0 auto;
+    color: black;
+    position: relative;
+}
+
+div.draggable{
+    width: 400px;
+    height: 60px;
+    margin: 5 auto;
+    line-height: 50px;
+    vertical-align: middle;
+    background-color: lightblue;
+    position: absolute;
+    text-align: center;
+    border-radius: 25px;
+}

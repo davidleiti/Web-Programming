@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE collection SYSTEM "collection.dtd">
+<?xml-stylesheet type="text/xsl" href="book.xsl"?>
+
+<collection>
+    <book href = "http://carturesti.ro/carte/1984-258717?p=1">
+        <title>1984</title>
+        <image>http://cdn.cartu.ro/img/prod/240/9780451524935-2792507-240.jpg</image>
+    </book>
+    <book href = "http://cdn.cartu.ro/img/prod/240/9780451524935-2792507-240.jpg">
+        <title>Animal Farm</title>
+        <image>http://img.sparknotes.com/content/sparklife/sparktalk/bloggingtheclassicsanimalfarmsparknotes_LargeWide.jpg</image>
+    </book>
+    <book href = "www.google.com">
+        <title>1984</title>
+        <reference>https://getbootstrap.com/docs/4.0/getting-started/download/</reference>
+        <image>https://www.w3schools.com/howto/img_fjords.jpg</image>
+    </book>
+    <book href = "www.google.com">
+        <title>1984</title>
+        <reference>https://getbootstrap.com/docs/4.0/getting-started/download/</reference>
+        <image>https://www.w3schools.com/howto/img_fjords.jpg</image>
+    </book>
+</collection>
