@@ -32,6 +32,7 @@ $("document").ready(function(){
                 methodName: "insert",
                 name: $("#Name").val(),
                 description: $("#Description").val(),
+                price: $("#Price").val(),
                 destinationID: $("#DestinationID").val()
             },
             success: function(data){
@@ -61,6 +62,7 @@ $("document").ready(function(){
                 id: $("#TargetID").val(),
                 name: $("#Name").val(),
                 description: $("#Description").val(),
+                price: $("#Price").val(),
                 destinationID: $("#DestinationID").val()
             },
             success: function(data){

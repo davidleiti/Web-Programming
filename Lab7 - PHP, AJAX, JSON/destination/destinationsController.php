@@ -26,11 +26,11 @@ class DestinationsController{
         }
     }
 
-    public function insertDestination($country, $city, $description){
+    public function insertDestination($country, $city, $address, $description){
         if ($country === "" || $city === "")
             echo "Some mandatory fields are missing!";
         else{
-            $result = $this->model->insertDestination($country, $city, $description);
+            $result = $this->model->insertDestination($country, $city, $address, $description);
             if ($result == TRUE){
                 echo "<br>Destination inserted successfully!<br>";
             }
@@ -55,12 +55,12 @@ class DestinationsController{
         $this->getAllDestinations();
     }
 
-    public function updateDestination($id, $country, $city, $description){
+    public function updateDestination($id, $country, $city, $address, $description){
         if ($id === "" || $country === "" || $city === ""){
             echo "Some mandatory fields are missing!";
         }
         else{
-            $result = $this->model->updateDestination($id, $country, $city, $description);
+            $result = $this->model->updateDestination($id, $country, $city, $address, $description);
             if ($result == TRUE){
             }
             else{
@@ -89,17 +89,20 @@ else if ($request == "POST"){
     $method = $_POST["methodName"];
     switch ($method){
         case "insert":
+            print_r($_POST);
             $country = $_POST["country"];
             $city = $_POST["city"];
+            $address = $_POST["address"];
             $description = $_POST["description"];
-            $c->insertDestination($country, $city, $description);
+            $c->insertDestination($country, $city, $address, $description);
             break;
         case "update":
             $id = $_POST["id"];
             $country = $_POST["country"];
             $city = $_POST["city"];
+            $address = $_POST["address"];
             $description = $_POST["description"];
-            $c->updateDestination($id, $country, $city, $description);
+            $c->updateDestination($id, $country, $city, $address, $description);
             break;
     }
 }

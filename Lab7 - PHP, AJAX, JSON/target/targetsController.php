@@ -26,11 +26,11 @@ class TargetsController{
         }
     }
 
-    public function insertTarget($name, $description, $destID){
+    public function insertTarget($name, $description, $price, $destID){
         if ($name === "" || $destID === "")
             echo "Some mandatory fields are missing!";
         else{
-            $result = $this->model->insertTarget($name, $description, $destID);
+            $result = $this->model->insertTarget($name, $description, $price, $destID);
             if ($result == TRUE){
                 echo "<br>Target inserted successfully!<br>";
             }
@@ -55,12 +55,12 @@ class TargetsController{
         $this->getAllTargets();
     }
 
-    public function updateTarget($id, $name, $description, $destinationID){
+    public function updateTarget($id, $name, $description, $price, $destinationID){
         if ($id === "" || $name === "" || $destinationID === ""){
             echo "Some mandatory fields are missing!";
         }
         else{
-            $result = $this->model->updateTarget($id, $name, $description, $destinationID);
+            $result = $this->model->updateTarget($id, $name, $description, $price, $destinationID);
             if ($result == TRUE){
             }
             else{
@@ -71,7 +71,6 @@ class TargetsController{
     }
 
 }
-
 $c = new TargetsController();
 $request = $_SERVER['REQUEST_METHOD'];
 if ($request == "GET"){
@@ -91,15 +90,17 @@ else if ($request == "POST"){
         case "insert":
             $name = $_POST["name"];
             $description = $_POST["description"];
+            $price = $_POST["price"];
             $destinationID = $_POST["destinationID"];
-            $c->insertTarget($name, $description, $destinationID);
+            $c->insertTarget($name, $description, $price, $destinationID);
             break;
         case "update":
             $id = $_POST["id"];
             $name = $_POST["name"];
             $description = $_POST["description"];
+            $price = $_POST["price"];
             $destinationID = $_POST["destinationID"];
-            $c->updateTarget($id, $name, $description, $destinationID);
+            $c->updateTarget($id, $name, $description, $price, $destinationID);
             break;
     }
 }

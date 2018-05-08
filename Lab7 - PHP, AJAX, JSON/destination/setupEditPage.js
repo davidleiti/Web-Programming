@@ -1,4 +1,5 @@
 $("document").ready(function(){
+    console.log("this is weird");
     $("#showAll").click(function(){
         $.ajax({
             url: "destinationsController.php",
@@ -32,6 +33,7 @@ $("document").ready(function(){
                 methodName: "insert",
                 country: $("#Country").val(),
                 city: $("#City").val(),
+                address: $("#Address").val(),
                 description: $("#Description").val()
             },
             success: function(data){
@@ -61,6 +63,7 @@ $("document").ready(function(){
                 id: $("#DestinationID").val(),
                 country: $("#Country").val(),
                 city: $("#City").val(),
+                address: $("#Address").val(),
                 description: $("#Description").val()
             },
             success: function(data){

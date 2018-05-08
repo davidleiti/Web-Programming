@@ -30,6 +30,10 @@
                     <th><input type = "text" id = "City"></th>
                 </tr>
                 <tr>
+                    <th>Address:</th>
+                    <th><input type = "text" id = "Address"></th>
+                </tr>
+                <tr>
                     <th>Description:</th>
                     <th><input type = "text" id = "Description"></th>
                 </tr>

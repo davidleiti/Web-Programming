@@ -10,15 +10,17 @@
     
 </head>
 <body>
-    <h2>Please choose an action</h2>
+    <h2>Welcome!</h2>
     <form action = "destination/editDestinations.php">
         <input type = "submit" value = "Edit destinations" style = "width: 130px">
     </form>
     <form action = "target/editTargets.php">
             <input type = "submit" value = "Edit tourist targets" style = "width: 130px">
         </form>
-    <form action = "destination/viewDestinations.php">
-        <input type = "submit" value = "View destinations" style = "width: 130px">
+    <form action = "browseView.php" method = "GET">
+        Browse destinations by country: <input type = "text" name = "country">
+        <input type = "submit" value = "Go >>">
+        <input type = "hidden" name = "offset" value = "0">
     </form>
 </body>
 </html>

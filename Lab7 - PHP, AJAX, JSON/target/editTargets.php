@@ -30,6 +30,10 @@
                     <th><input type = "text" id = "Description"></th>
                 </tr>
                 <tr>
+                    <th>Price:</th>
+                    <th><input type = "text" id = "Price"></th>
+                </tr>
+                <tr>
                     <th>Destination ID:</th>
                     <th><input type = "text" id = "DestinationID"></th>
                 </tr>

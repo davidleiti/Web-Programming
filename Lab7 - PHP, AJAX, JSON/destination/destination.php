@@ -4,12 +4,14 @@ class Destination{
     private $destinationID;
     private $country;
     private $city;
+    private $address;
     private $description;
 
-    public function __construct($id, $country, $city, $description){
+    public function __construct($id, $country, $city, $address, $description){
         $this->destinationID = $id;
-        $this->county = $country;
+        $this->country = $country;
         $this->city = $city;
+        $this->address = $address;
         $this->description = $description;
     }
 
@@ -25,9 +27,18 @@ class Destination{
         return $this->city;
     }
 
+    public function getAddress(){
+        return $this->address;
+    }
+
     public function getDescription(){
         return $this->description;
     }
+
+    public function toString(){
+        echo "ID: " . $this->destinationID . "<br>Country: " . $this->country . "<br>City: " . $this->city . "<br>Address: " . $this->address . "<br>Description: " . $this->description;
+    }
+
 }
 
 ?>
