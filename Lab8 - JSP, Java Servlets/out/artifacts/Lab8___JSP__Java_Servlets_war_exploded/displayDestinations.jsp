@@ -123,7 +123,7 @@
                         city: cityName,
                         user: '<%= user %>'
                     },
-                    success: loadCities()
+                    success: function(){ setTimeout(loadCities(), 10000); }
                 });
             });
         });

@@ -86,7 +86,7 @@ public class DBManager {
                 int nr = 0;
                 if (rs.next())
                     nr = rs.getInt("Nr");
-                stmt.execute("insert into usercities(UserID, CityID, Nr) values(" + userId + ", " + id + ", " + (nr+1) + ")");
+                boolean ok = stmt.execute("insert into usercities(UserID, CityID, Nr) values(" + userId + ", " + id + ", " + (nr+1) + ")");
                 System.out.println("left addCityToRoute");
                 System.out.println();
             }
