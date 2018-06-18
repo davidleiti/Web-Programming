@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "LoginFailedView";
+}
+
+<h2>Username or password was incorrect!</h2>
+@using (Html.BeginForm("Index", "Login", FormMethod.Get))
+{
+    <input type="submit" value="<< Back" />
+}
+
+

@@ -73,18 +73,22 @@
                     all: "true",
                     user: '<%= user %>'
                 },
-                success: loadRoute()
-            });
-            $.ajax({
-                type: "DELETE",
-                url: "RouteController?all=true",
+                success: function () {
+                    loadRoute();
+                    setTimeout(function () {
+                        $.ajax({
+                            type: "DELETE",
+                            url: "RouteController?all=true",
 
-                data: {
-                    all: "true",
-                    user: '<%= user %>'
+                            data: {
+                                all: "true",
+                                user: '<%= user %>'
+                            }
+                        });
+                    }, 2000);
                 }
             })
-        })
+        });
     });
 
     function loadRoute(){

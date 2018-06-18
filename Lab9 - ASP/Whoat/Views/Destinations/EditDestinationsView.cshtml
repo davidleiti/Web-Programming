@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "EditDestinationsView";
+}
+<head>
+    <title>Edit data</title>
+    <script src="~/Scripts/jquery-3.3.1.js"></script>
+    <script src="~/Scripts/setupDestinationsPage.js"></script>
+    <link rel="stylesheet" href="~/Content/editPages.css">
+</head>
+<body>
+    <br />
+    @using (Html.BeginForm("Index", "Main", FormMethod.Get))
+    {
+        <input type="submit" value="<< Return">
+    }
+    <form>
+        <fieldset>
+            <legend>Destination fields:</legend>
+            <table id="fields">
+                <tr>
+                    <th>Destination ID:</th>
+                    <td><input type="text" id="DestinationID"></td>
+                </tr>
+                <tr>
+                    <th>Country:</th>
+                    <td><input type="text" id="Country"></td>
+                </tr>
+                <tr>
+                    <th>City:</th>
+                    <td><input type="text" id="City"></td>
+                </tr>
+                <tr>
+                    <th>Address:</th>
+                    <td><input type="text" id="Address"></td>
+                </tr>
+                <tr>
+                    <th>Description:</th>
+                    <td><input type="text" id="Description"></td>
+                </tr>
+            </table>
+            <table id="operations">
+                <tr>
+                    <td>Show all desinations:</td>
+                    <td><input class="b" type="button" id="showAll" value="Show"></td>
+                </tr>
+                <tr>
+                    <td>Show destination with given ID:</td>
+                    <td><input class="b" type="button" id="showWithID" value="Show"></td>
+                </tr>
+                <tr>
+                    <td>Insert destination:</td>
+                    <td><input class="b" type="button" id="insert" value="Insert"></td>
+                </tr>
+                <tr>
+                    <td>Remove destination with given ID:</td>
+                    <td><input class="b" type="button" id="delete" value="Remove"></td>
+                </tr>
+                <tr>
+                    <td>Update destination:</td>
+                    <td><input class="b" type="button" id="update" value="Update"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <div id="resultsDiv">
+    </div>
+
+</body>

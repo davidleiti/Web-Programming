@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "MainView";
+}
+<html>
+<head>
+    <title>Main page</title>
+    <style>
+        input {
+            padding: 4px;
+            margin: 3px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Welcome!</h2>
+    @using (Html.BeginForm("Index", "Destinations", FormMethod.Get))
+    {
+        <input type="submit" value="Edit destinations" style="width: 130px">
+    }
+    @using (Html.BeginForm("Index", "Targets", FormMethod.Get))
+    {
+        <input type="submit" value="Edit targets" style="width: 130px">
+    }
+    <br />
+    <h4>Browse destinations by country</h4>
+    @using (Html.BeginForm("Index", "Browse", FormMethod.Get))
+    {
+        <input type="text" name="country" />
+        <br />
+        <input type="hidden" name="offset" value="0" />
+        <input type="submit" value="Go >>" />
+    }
+    @*<form action="browseView.php" method="GET">
+            Browse destinations by country: <input type="text" name="country">
+            <input type="submit" value="Go >>">
+            <input type="hidden" name="offset" value="0">
+        </form>*@
+</body>
+</html>

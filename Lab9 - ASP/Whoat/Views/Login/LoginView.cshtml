@@ -1,0 +1,44 @@
+﻿@model Whoat.Models.User
+
+@{
+    ViewBag.Title = "LoginView";
+}
+@if (Session["LoggedUserID"] != null)
+{
+    Session["LoggedUserID"] = null;
+}
+ <head>
+     <style>
+         table, tr, td{
+             text-align: center;
+             padding: 2px;
+         }
+     </style>
+ </head>
+ <body>
+     <h2>LoginView</h2>
+     @using (Html.BeginForm("Login", "Login", FormMethod.Post))
+     {
+         @Html.AntiForgeryToken()
+         @Html.ValidationSummary(true)
+         <table>
+             <tr>
+                 <td>@Html.LabelFor(u => u.Username)</td>
+                 <td>@Html.TextBoxFor(u => u.Username)</td>
+                 <td>@Html.ValidationMessageFor(u => u.Username)</td>
+             </tr>
+             <tr>
+                 <td>@Html.LabelFor(u => u.Password)</td>
+                 <td>@Html.PasswordFor(u => u.Password)</td>
+                 <td>@Html.ValidationMessageFor(u => u.Password)</td>
+             </tr>
+             <tr>
+                 <td></td>
+                 <td><input type="submit" value="Login" /></td>
+                 <td></td>
+             </tr>
+         </table>
+     }
+ </body>
+
+

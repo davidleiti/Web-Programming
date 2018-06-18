@@ -1,0 +1,81 @@
+﻿@using Whoat.Models;
+@{
+    ViewBag.Title = "BrowseView";
+}
+
+<h2>BrowseView</h2>
+<head>
+    <title>Browse destinations</title>
+    <style>
+        table, tr, td, th {
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        th, td {
+            width: 80px;
+        }
+
+        #back {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        @{
+            List<Destination> destinations = (List<Destination>)ViewData["CurrentDestinations"];
+            string currCountry = (string)ViewData["Country"];
+            int currOffset = (int)ViewData["Offset"];
+            if (destinations.Count == 0)
+            {
+                <h3>No more destinations in @currCountry...</h3>
+            }
+            else
+            {
+                <h3>Destinations in @currCountry...</h3>
+                using (Html.BeginForm("Index", "Main", FormMethod.Get))
+                {
+                    <input type="submit" value="<< Main menu" />
+                }
+                <br />
+                <table>
+                    <tr>
+                        <th>Country</th>
+                        <th>City</th>
+                        <th>Address</th>
+                        <th>Description</th>
+                    </tr>
+                    @foreach (Destination dest in destinations)
+                    {
+                        <tr>
+                            <td>@dest.Country</td>
+                            <td>@dest.City</td>
+                            <td>@dest.Address</td>
+                            <td>@dest.Description</td>
+                        </tr>
+                    }
+                </table>
+            }
+            if (currOffset != 0)
+            {
+                using (Html.BeginForm("Index", "Browse", FormMethod.Get, new { id = "back" }))
+                {
+                    @Html.Hidden("country", currCountry)
+                    @Html.Hidden("offset", currOffset - 4)
+                    <input type="submit" value="<< Back" />
+                }
+            }
+            if (destinations.Count != 0)
+            {
+                using (Html.BeginForm("Index", "Browse", FormMethod.Get, new { id = "next" }))
+                {
+                    @Html.Hidden("country", currCountry)
+                    @Html.Hidden("offset", currOffset + 4)
+                    <input type="submit" value="Next >>" />
+                }
+            }
+        }
+    </div>
+</body>
+
