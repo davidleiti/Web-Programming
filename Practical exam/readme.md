@@ -1,2 +1,3 @@
-# to-do
-Not yet finished, further bugfixes later
+# Site under construction
+* Not all requirements implemented
+* Further bugfixes to be added 
