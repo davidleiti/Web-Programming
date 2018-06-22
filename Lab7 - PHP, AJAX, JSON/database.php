@@ -48,7 +48,7 @@ class DB{
         $result = $this->conn->query($selectCommand);
         return $result;
     }
-    
+
     public function selectTargetsAtDestination($id){
         $selectCommand = "SELECT * FROM Targets WHERE DestinationID = " . $id;
         $result = $this->conn->query($selectCommand);
@@ -89,7 +89,7 @@ class DB{
         }
         return $this->conn->error;
     }
-    
+
     public function deleteTarget($id){
         $deleteCommand = "DELETE FROM Targets WHERE TargetID = " . $id;
         $b = $this->conn->query($deleteCommand);
